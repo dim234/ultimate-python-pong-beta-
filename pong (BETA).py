@@ -1,4 +1,4 @@
-# pong ver 0,2 by dim
+# pong ver 0,3 by dim
 
 import turtle
 from turtle import Turtle
