@@ -3,4 +3,7 @@ The classic game remastered in python.Still in beta.To run, you will need a pyth
 
 Recommended Compiler:
 Py Charm
+
+or
+
 Visual Studio Code
