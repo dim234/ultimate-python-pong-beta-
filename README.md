@@ -1,5 +1,5 @@
 # python-pong-0-3-beta-
-The classic game remastered in python.Still in beta.To run, you will need a python compiler until update 0,4
+The classic game remastered in python.Doesn't have an .exe to open.Needs to have python installed in your pc.
 
 Recommended Compiler:
 
