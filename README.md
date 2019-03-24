@@ -2,14 +2,7 @@
 The classic game remastered in python.Doesn't have an .exe to open.Opens from the .py file.
 Needs to have python installed in your pc.
 
-Recommended Compiler:
+To open in windows, right click -> open with -> python 
 
-Py Charm
-
-or
-
-Visual Studio Code
-
-
-Please tel me about any errors.
+Please tel me about any errors or bugs.
 Thanks
