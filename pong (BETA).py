@@ -6,7 +6,7 @@ from turtle import Turtle
 wn = turtle.Screen()
 wn.title("Pong ver 0,3")
 wn.bgcolor("black")
-wn.setup(width=900, height=600)
+wn.setup(width=800, height=600)
 wn.tracer(0)
 
 # paddle a
