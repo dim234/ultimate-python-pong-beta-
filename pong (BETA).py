@@ -1,10 +1,9 @@
-# pong ver 0,3 by dim
+# pong ver 0,3,1 by dim234
 
 import turtle
 from turtle import Turtle
-
 wn = turtle.Screen()
-wn.title("Pong ver 0,3")
+wn.title("Pong ver 0,3,1")
 wn.bgcolor("black")
 wn.setup(width=800, height=600)
 wn.tracer(0)
