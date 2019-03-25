@@ -37,10 +37,16 @@ ball.goto(0, 0)
 ball.dx = 2
 ball.dy = -2
 
+# pen
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write("0-0", align="center")
 
 # function
-
-
 def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
@@ -107,7 +113,7 @@ while True:
         ball.setx(-340)
         ball.dx *= -1
 
-    #'Scoring system'
+    # Scoring system
 
 
 
