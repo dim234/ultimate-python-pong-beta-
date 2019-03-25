@@ -44,7 +44,7 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("0-0", align="center", font=("Courier", 24, "normal"))
+pen.write("player a: 0 player b: 0", align="center", font=("Courier", 24, "normal"))
 
 
 # function
@@ -100,10 +100,16 @@ while True:
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
+        score_a += 1
+        pen.clear()
+        pen.write("player a: 0 {} player b: 0 {}".format(score_a, scoa_b), align="center", font=("Courier", 24, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
+        scoa_b += 1
+        pen.clear()
+        pen.write("player a: 0 {} player b: 0 {}".format(score_a, scoa_b), align="center", font=("Courier", 24, "normal"))
 
     # Paddle and ball collisions
     if ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
@@ -115,6 +121,3 @@ while True:
         ball.dx *= -1
 
     # Scoring system
-
-
-
