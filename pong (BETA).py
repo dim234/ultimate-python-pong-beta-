@@ -44,7 +44,8 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("0-0", align="center")
+pen.write("0-0", align="center", font=("Courier"))
+
 
 # function
 def paddle_a_up():
