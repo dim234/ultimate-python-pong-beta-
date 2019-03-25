@@ -1,5 +1,5 @@
 # python-pong-0-3-beta-
-The classic game remastered in python.Doesn't have an .exe to open.Opens from the .py file.
+The classic game remastered in python(beta).Doesn't have an .exe to open.Opens from the .py file.
 Needs to have python installed in your pc.
 
 HOW TO RUN
