@@ -107,7 +107,7 @@ while True:
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
-        scoa_b += 1
+        score_b +=1
         pen.clear()
         pen.write("player a: 0 {} player b: 0 {}".format(score_a, scoa_b), align="center", font=("Courier", 24, "normal"))
 
