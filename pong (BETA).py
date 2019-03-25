@@ -34,8 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 1
-ball.dy = -1
+ball.dx = 6
+ball.dy = -6
 
 # pen
 pen = turtle.Turtle()
@@ -124,6 +124,19 @@ while True:
         score_b = z
         pen.clear()
         pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+
+    if pen.write("player a: 20", align="center", font=("Courier", 24, "normal")):
+        type("A WINS")
+
+    if pen.write("player b: 20", align="center", font=("Courier", 24, "normal")):
+        type("B WINS")
+
+    if pen.write("player a: 20 player b: {}", align="center", font=("Courier", 24, "normal")):
+        exit()
+
+    if pen.write("player a: {} player b: 20", align="center", font=("Courier", 24, "normal")):
+        type("B WINS")
+        exit()
 
     # Paddle and ball collisions
     if ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
