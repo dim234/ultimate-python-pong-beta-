@@ -2,11 +2,13 @@
 
 import turtle
 from turtle import Turtle
+
 wn = turtle.Screen()
 wn.title("Pong ver 0,3,1")
 wn.bgcolor("black")
 wn.setup(width=800, height=600)
 wn.tracer(0)
+score = 0
 
 # paddle a
 paddle_a = turtle.Turtle()
@@ -105,3 +107,15 @@ while True:
     if ball.xcor() < -340 and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
+
+    #'Scoring system'
+    if ball.xcor() < -340 and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
+        print("Player A Scored!")
+        score + 1
+
+    if  ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
+        print("Player B Scored!")
+        score = score + 1
+
+
+
