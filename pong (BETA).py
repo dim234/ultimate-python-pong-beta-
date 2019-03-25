@@ -48,11 +48,11 @@ pen.write("player a: 0 player b: 0", align="center", font=("Courier", 24, "norma
 
 
 def score_a():
-    pen.write("player a: {}", align="center", font=("Courier", 24, "normal"))
+    pen.write("player a: {} player b: {}", align="center", font=("Courier", 24, "normal"))
 
 
 def score_b():
-    pen.write("player b: {}", align="center", font=("Courier", 24, "normal"))
+    pen.write("player a: {} player b: {}", align="center", font=("Courier", 24, "normal"))
 
 
 # function
@@ -110,14 +110,28 @@ while True:
     if ball.xcor() > 390:
         ball.goto(0, 0)
         ball.dx *= -1
-        score_a += 1
+        score_a = 1
         pen.clear()
         pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
         ball.dx *= -1
-        score_b += 1
+        score_b = 1
+        pen.clear()
+        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+
+    if ball.xcor() > 390 and score_b(1):
+        ball.goto(0, 0)
+        ball.dx *= -1
+        score_a = 2
+        pen.clear()
+        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+
+    if ball.xcor() < -390 and score_b(1):
+        ball.goto(0, 0)
+        ball.dx *= -1
+        score_b = 2
         pen.clear()
         pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
 
