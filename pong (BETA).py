@@ -34,8 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 6
-ball.dy = -6
+ball.dx = 1
+ball.dy = -1
 
 # pen
 pen = turtle.Turtle()
@@ -133,3 +133,13 @@ while True:
     if ball.xcor() < -340 and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
+
+# Game over
+# noinspection PyUnreachableCode
+if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal")):
+    print("A WINS")
+    exit(wn)
+
+if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Courier", 24, "normal")):
+    print("B WINS")
+    exit(wn)
