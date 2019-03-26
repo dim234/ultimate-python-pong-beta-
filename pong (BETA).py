@@ -34,8 +34,8 @@ ball.shape("square")
 ball.color("white")
 ball.penup()
 ball.goto(0, 0)
-ball.dx = 1
-ball.dy = -1
+ball.dx = 16
+ball.dy = -16
 
 # pen
 pen = turtle.Turtle()
@@ -125,6 +125,22 @@ while True:
         pen.clear()
         pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal"))
 
+    # Game over a
+    if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
+        print("A WINS")
+        exit(wn)
+
+    # Game over b
+    if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
+        print("B WINS")
+        exit(wn)
+
+    # Reset
+
+    if pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
+        paddle_a.goto(-350, 0)
+        paddle_b.goto(350, 0)
+
     # Paddle and ball collisions
     if ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
         ball.setx(340)
@@ -133,13 +149,3 @@ while True:
     if ball.xcor() < -340 and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
         ball.dx *= -1
-
-# Game over a
-if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
-    print("A WINS")
-    exit(wn)
-
-# Game over b
-if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
-    print("B WINS")
-    exit(wn)
