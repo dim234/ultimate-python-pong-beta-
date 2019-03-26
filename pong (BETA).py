@@ -1,5 +1,4 @@
 # pong ver 0,3,1 by dim234
-
 import turtle
 from turtle import Turtle
 
