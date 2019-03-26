@@ -44,15 +44,15 @@ pen.color("white")
 pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
-pen.write("player a: 0 player b: 0", align="center", font=("Courier", 24, "normal"))
+pen.write("player a: 0 player b: 0", align="center", font=("Italic", 24, "normal"))
 
 
 def score_a():
-    pen.write("player a: {} player b: {}", align="center", font=("Courier", 24, "normal"))
+    pen.write("player a: {} player b: {}", align="center", font=("Italic", 24, "normal"))
 
 
 def score_b():
-    pen.write("player a: {} player b: {}", align="center", font=("Courier", 24, "normal"))
+    pen.write("player a: {} player b: {}", align="center", font=("Italic", 24, "normal"))
 
 
 # function
@@ -115,7 +115,7 @@ while True:
         w += 1
         score_a = w
         pen.clear()
-        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal"))
 
     if ball.xcor() < -390:
         ball.goto(0, 0)
@@ -123,7 +123,7 @@ while True:
         z += 1
         score_b = z
         pen.clear()
-        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
+        pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal"))
 
     # Paddle and ball collisions
     if ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
@@ -134,12 +134,12 @@ while True:
         ball.setx(-340)
         ball.dx *= -1
 
-# Game over
-# noinspection PyUnreachableCode
-if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal")):
+# Game over a
+if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
     print("A WINS")
     exit(wn)
 
-if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Courier", 24, "normal")):
+# Game over b
+if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
     print("B WINS")
     exit(wn)
