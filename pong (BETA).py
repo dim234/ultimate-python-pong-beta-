@@ -1,4 +1,5 @@
 # pong ver 0,3,1 by dim234
+# turtle
 import turtle
 from turtle import Turtle
 
@@ -55,8 +56,6 @@ def score_b():
 
 
 # function
-
-
 def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
@@ -147,4 +146,4 @@ while True:
 
     if ball.xcor() < -340 and (paddle_a.ycor() + 40 > ball.ycor() > paddle_a.ycor() - 40):
         ball.setx(-340)
-        ball.dx *= -1
+        ball.dx *= -1 
