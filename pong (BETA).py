@@ -125,20 +125,16 @@ while True:
         pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal"))
 
     # Game over a
-    #if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
-        #print("A WINS")
-        #exit(wn)
+   # if pen.write("player a: 20 player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
+       # print("A WINS")
+       # paddle_a.goto(-350, 0)
+    # paddle_b.goto(350, 0)
 
     # Game over b
-    #if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
-        #print("B WINS")
-        #exit(wn)
-
-    # Reset
-
-    #if pen.write("player a: {} player b: {}".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
-        #paddle_a.goto(-350, 0)
-        #paddle_b.goto(350, 0)
+   # if pen.write("player a: {} player b: 20".format(score_a, score_b), align="center", font=("Italic", 24, "normal")):
+       # print("B WINS")
+       # paddle_a.goto(-350, 0)
+       # paddle_b.goto(350, 0)
 
     # Paddle and ball collisions
     if ball.xcor() > 340 and (paddle_b.ycor() + 40 > ball.ycor() > paddle_b.ycor() - 40):
